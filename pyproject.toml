@@ -1,0 +1,25 @@
+[project]
+name = "inspect-eval-gate-lab"
+version = "0.1.0"
+description = "Lab: stdlib eval regression gate (Inspect-style) — score vs committed baseline, fail CI on drop. Not production."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Lu Yupeng" }]
+dependencies = []
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/BrickerP/inspect-eval-gate-lab"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["lab*"]
