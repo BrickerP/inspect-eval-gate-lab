@@ -1,0 +1,35 @@
+{
+  "task": "toy_arithmetic",
+  "samples": [
+    {
+      "id": "add-2-2",
+      "question": "What is 2 + 2?",
+      "target": "4",
+      "answers": {"working": "4", "broken": "4"}
+    },
+    {
+      "id": "sub-7-3",
+      "question": "What is 7 - 3?",
+      "target": "4",
+      "answers": {"working": "4", "broken": "3"}
+    },
+    {
+      "id": "mul-6-3",
+      "question": "What is 6 * 3?",
+      "target": "18",
+      "answers": {"working": "18", "broken": "18"}
+    },
+    {
+      "id": "div-15-3",
+      "question": "What is 15 / 3?",
+      "target": "5",
+      "answers": {"working": "5", "broken": "3"}
+    },
+    {
+      "id": "add-10-5",
+      "question": "What is 10 + 5?",
+      "target": "15",
+      "answers": {"working": "15", "broken": "15"}
+    }
+  ]
+}

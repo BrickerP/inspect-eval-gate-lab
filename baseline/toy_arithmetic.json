@@ -1,0 +1,8 @@
+{
+  "schema": "lab.baseline.v1",
+  "task": "toy_arithmetic",
+  "n": 5,
+  "metrics": {
+    "accuracy": 1.0
+  }
+}

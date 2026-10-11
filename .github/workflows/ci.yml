@@ -1,0 +1,31 @@
+# Stdlib only. No API keys, no package install, no inspect-ai.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lab:
+    name: tests, score, gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Score working agent
+        run: python -m lab score
+      - name: Regression gate
+        run: python -m lab gate
